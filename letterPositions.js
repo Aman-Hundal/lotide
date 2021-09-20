@@ -39,6 +39,10 @@ Steps -> 1. create a clean string and newObj 2. for loop through the characters 
 */
 
 //test
-console.log(letterPositions("hello elliot"));
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello 21")[2], [6]);
+// console.log(letterPositions("hello elliot"));
+// assertArraysEqual(letterPositions("hello").e, [1]);
+// assertArraysEqual(letterPositions("hello 21")[2], [6]);
+
+module.exports = {
+  letterPositions
+};

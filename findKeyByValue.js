@@ -14,7 +14,7 @@ function findKeyByValue(obj,value) {
     }
   }
   return undefined;
-}
+};
 
 /* Goal -> return the first key from the passed in obj from the given value. If no key is found return undefined
 input -> an object, and a string value
@@ -23,11 +23,15 @@ Steps ->
 */
 
 //test
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama:  "The Wire"
+// };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+
+module.exports = {
+  findKeyByValue
+};
