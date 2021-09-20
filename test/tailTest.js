@@ -1,13 +1,17 @@
-const tail = require('../tail').tail
-const assertEqual = require('../tail').assertEqual
+const tail = require('../tail').tail;
+const assert = require('chai').assert;
 
-//test
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result, ["Lighthouse", "Labs"]);  // => will always fail!
-
-// Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-let newArray = tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-console.log(words);
-console.log(newArray);
+describe('#tail unit test', ()=> {
+  it("should remove the first elm from an array", function() {
+    let input = ["Hello", "Lighthouse", "Labs"];
+    assert.deepEqual(tail(input), ["Lighthouse", "Labs"]);
+  });
+  it("should not modify the original array", function() {
+    let input = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.equal(input.length, 3);
+  });
+  it("should be a different array from original", function() {
+    let input = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.notDeepEqual(tail(input), input);
+  });
+});
